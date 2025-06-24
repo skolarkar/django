@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static tailwind_tags %}
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}" />
+    {% tailwind_css %}
+    <title>{% block title %}Shambhavi's Website{% endblock %}</title>
+  </head>
+  <body>
+    <blockquote>
+      <p>{% block content %} Welcome, Today is
+    <p id="dateDisplay"></p>
+    and we are all very thankful to the God.
+
+    <script src="{% static 'js/script1.js' %}"></script>{% endblock %}</p>
+    </blockquote>
+  </body>
+</html>
+

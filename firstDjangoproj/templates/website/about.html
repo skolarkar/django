@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shambhavi's page</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
+    <link
+      rel="icon"
+      href="{% static 'img/favicon.ico' %}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Welcome to Shambhavi's Website</h1>
+    </main>
+    <h1>About Page</h1>
+    Today is
+    <p id="dateDisplay"></p>
+    and we are all very thankful to the God.
+
+    <script src="{% static 'js/script1.js' %}"></script>
+    <!--script src="index.js"></script-->
+  </body>
+</html>

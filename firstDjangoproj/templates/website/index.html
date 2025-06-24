@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %} {% load static %} {% block title %}{{ block.super }}
+- Home Page{% endblock %} {% block content %}
+<h1 class="bg-blue-500 text-5xl p-4 rounded">Welcome to My Website</h1>
+
+{% for shows in tvShows %}
+<div class="p-4 border rounded mb-4">
+  {% if shows.image %}
+  <img
+    src="{{ shows.image.url }}"
+    alt="{{ shows.name }}"
+    class="w-full h-auto rounded"
+    width="100"
+    height="100"
+  />
+  {% endif %}
+  <h3 class="text-xl font-bold mt-2">{{ shows.name }}</h3>
+  <p class="text-gray-600">{{ shows.get_series_display }}</p>
+  <p class="text-sm text-gray-500">
+    Added: {{ shows.date_added|date:"M d, Y" }}
+  </p>
+</div>
+{% empty %}
+<p>No TV shows available.</p>
+{% endfor %} {% endblock %}
